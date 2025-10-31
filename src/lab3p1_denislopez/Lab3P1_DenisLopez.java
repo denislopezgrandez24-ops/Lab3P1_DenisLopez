@@ -35,25 +35,60 @@ public class Lab3P1_DenisLopez {
                         for (int i=1; i<=par; i++){
                             for(int j=1; j<=par; j++){
                                     System.out.print("- ");
-                                    if ((i==1 && i==par)&& (j==1 && j))
+                                    if (j==1 && i==1 && j==par && i==par){
+                                       System.out.print(" "); 
+                                    }
                             }
-                            
                             System.out.println(" ");
                         }//
                         System.out.println();
                     }
-                    System.out.println("Tamano invalido intente denuevo:");
-                    par = leer.nextInt();
-                    
+                    System.out.println("Tamano invalido intente denuevo:");  
                 }//fin opcion 1
                 break;
                 case 2:{
                     System.out.println("Te dije que te llevaras lo que quisieras, no que te llevaras todo");
-                    
-                    
+                    System.out.println("Ingrese un numero mayor que 0");
+                    int numero = leer.nextInt();
+                    int suma=0;
+                    if (numero>0){
+                        for (int i=1; i<=numero; i++){
+                            if (i==1){
+                              System.out.println(2);
+                            }
+                            if (i==2){
+                              System.out.println(1);
+                            }
+                            if (i>2) {
+                              suma+=i;
+                              System.out.println(+suma);
+                            }
+                        }
+                    }
+                    System.out.println("Ingrese un numero valido: "); 
+                }
+                break;
+                case 3:{
+                    System.out.println("Sumatoria");
+                    System.out.println("Ingrese el limite(n): ");
+                    int limite = leer.nextInt();
+                    int suma1;
+                    for (int i=1; i<=limite; i++){
+                        suma1 = ((i*i)+ (3*i+2))/(i+1);
+                        System.out.println("n - "+i+", suma - "+suma1);
+                    }  
+                }
+                default:{
                 }
                 
             }// fin del switch
+            System.out.println("Menu");
+            System.out.println("1. Figuras y mas figuras");
+            System.out.println("2. Te dije que te llevaras lo que quisieras, no que te llevaras todo");
+            System.out.println("3. Sumatoria");
+            System.out.println("4. Salir");
+            System.out.println("Ingrese su opcion: ");
+            opcion= leer.nextInt();
             
         }// fin del while
         
