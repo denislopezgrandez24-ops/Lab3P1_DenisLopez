@@ -35,11 +35,13 @@ public class Lab3P1_DenisLopez {
                         for (int i=1; i<=par; i++){
                             for(int j=1; j<=par; j++){
                                     System.out.print("- ");
-                                    if (j==1 && i==1 && j==par && i==par){
-                                       System.out.print(" "); 
-                                    }
+                            for(int k=i; k<1 && k>6 ;k--){
+                                    System.out.print(" ");
                             }
-                            System.out.println(" ");
+     
+                            }
+                            System.out.println();
+                            
                         }//
                         System.out.println();
                     }
@@ -66,18 +68,20 @@ public class Lab3P1_DenisLopez {
                         }
                     }
                     System.out.println("Ingrese un numero valido: "); 
-                }
+                }//fin opcion 2
                 break;
                 case 3:{
                     System.out.println("Sumatoria");
                     System.out.println("Ingrese el limite(n): ");
                     int limite = leer.nextInt();
-                    int suma1;
+                    double formula;
                     for (int i=1; i<=limite; i++){
-                        suma1 = ((i*i)+ (3*i+2))/(i+1);
-                        System.out.println("n - "+i+", suma - "+suma1);
+                        double factorial=i;
+                        factorial*=(i+1);
+                        formula = ((i*i)+ (3*i+2)/factorial);
+                        System.out.println("n - "+i+", suma - "+formula);
                     }  
-                }
+                }//fin opcion 3
                 default:{
                 }
                 
